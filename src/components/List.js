@@ -28,17 +28,19 @@ const List = () => {
   return (
     <>
       <h2>List of characters</h2>
-      { loading ? <h1>Loading</h1> : (
-        characters.map((character) => (
-          <Character
-            key={character.id}
-            name={character.name}
-            origin={character.origin.name}
-            image={character.image}
-            // {...character}
-          />
-        ))
-      )}
+      <div className="row">
+        { loading ? <h1>Loading</h1> : (
+          characters.map((character) => (
+            <Character
+              key={character.id}
+              name={character.name}
+              origin={character.origin.name}
+              image={character.image}
+              // {...character}
+            />
+          ))
+        )}
+      </div>
     </>
   )
 }
